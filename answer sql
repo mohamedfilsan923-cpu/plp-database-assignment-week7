@@ -1,0 +1,57 @@
+Assignment Questions
+Question 1: Achieving First Normal Form (1NF)
+
+You are given the following table called ProductDetail:
+
+OrderID	CustomerName	Products
+101	John Doe	Laptop, Mouse
+102	Jane Smith	Tablet, Keyboard, Mouse
+103	Emily Clark	Phone
+
+The Products column contains multiple values in a single cell, violating First Normal Form (1NF).
+
+Your Task:
+
+Write SQL statements to transform the ProductDetail table into 1NF.
+
+Requirements:
+
+Ensure that each row represents only one product per order.
+
+Create an appropriate table structure.
+
+Insert the normalized records into the new table.
+
+Ensure that the resulting table does not contain multiple product values in a single column.
+
+Question 2: Achieving Second Normal Form (2NF)
+
+You are given the following table called OrderDetails, which is already in 1NF but contains partial dependencies.
+
+OrderID	CustomerName	Product	Quantity
+101	John Doe	Laptop	2
+101	John Doe	Mouse	1
+102	Jane Smith	Tablet	3
+102	Jane Smith	Keyboard	1
+102	Jane Smith	Mouse	2
+103	Emily Clark	Phone	1
+
+The composite primary key is assumed to be (OrderID, Product).
+
+The CustomerName depends only on OrderID, rather than the entire composite key. This creates a partial dependency and violates 2NF.
+
+Your Task:
+
+Write SQL statements to transform the OrderDetails table into 2NF.
+
+Requirements:
+
+Identify the partial dependency.
+
+Create a separate Orders table to store order information.
+
+Create an OrderItems table to store products and quantities associated with each order.
+
+Define appropriate primary keys and foreign keys.
+
+Insert the normalized records into the new tables.
